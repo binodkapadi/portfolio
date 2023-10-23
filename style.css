@@ -396,6 +396,12 @@ section .title::after{
     width: 70%;
 }
 
+.skill_text{
+padding-top: 15px;
+  font-weight: bold;
+  color: #111;
+}
+
 /* teams section styling */
 .teams .title::after{
     content: "who with me";
