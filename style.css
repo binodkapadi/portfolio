@@ -39,7 +39,7 @@ section{
     padding: 0 80px;
     margin: auto;
 }
-.about, .services, .skills, .teams, .contact, .personal, footer{
+.about, .services, .skills, .projects, .contact, .personal, footer{
     font-family: 'Poppins', sans-serif;
 }
 .about .about-content,
@@ -268,17 +268,17 @@ section .title::after{
   color: #111;
 }
 
-/* services section styling */
-.services, .teams{
+/* services & projects section styling */
+.services, .projects{
     color:#fff;
     background: #111;
 }
 .services .title::before,
-.teams .title::before{
+.projects .title::before{
     background: #fff;
 }
 .services .title::after,
-.teams .title::after{
+.projects .title::after{
     background: #111;
     content: "what i provide";
 }
@@ -395,6 +395,13 @@ section .title::after{
 .skills-content .right .mysql::before{
     width: 70%;
 }
+/* custom widths for new skills */
+.skills-content .right .mern::before{
+    width: 85%;
+}
+.skills-content .right .python::before{
+    width: 90%;
+}
 
 .skill_text{
 padding-top: 15px;
@@ -402,67 +409,114 @@ padding-top: 15px;
   color: #111;
 }
 
-/* teams section styling */
-.teams .title::after{
-    content: "who with me";
+/* projects section styling */
+.projects .title::after{
+    content: "what I built";
 }
-.teams .carousel .card{
-    background: #222;
-    border-radius: 6px;
-    padding: 25px 35px;
-    text-align: center;
-    overflow: hidden;
-    transition: all 0.3s ease;
-}
-.teams .carousel .card:hover{
-    background: crimson;
-}
-.teams .carousel .card .box{
+.projects-content{
     display: flex;
     flex-direction: column;
+    gap: 30px;
+}
+.project-card{
+    display: flex;
+    flex-wrap: wrap;
+    background: #222;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.35);
+}
+.project-image{
+    flex: 1 1 260px;
+    min-height: 0;
+}
+.project-image img{
+    width: 100%;
+    height: auto;
+    max-height: 420px;
+    object-fit: contain;
+    display: block;
+}
+.project-info{
+    flex: 1 1 320px;
+    padding: 20px 25px;
+}
+.project-info h3{
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+.project-info p{
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 14px;
+    text-align: justify;
+}
+.project-link{
+    display: inline-block;
+    background: crimson;
+    color: #fff;
+    padding: 8px 18px;
+    border-radius: 6px;
+    border: 2px solid crimson;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+.project-link:hover{
+    color: crimson;
+    background: transparent;
+}
+
+/* Project image sliders (Quizify, Notes_summarizer, Codeexplainer, etc.) */
+.quizify-slider,
+.notes-summarizer-slider,
+.codeexplainer-slider{
+    position: relative;
+    overflow: hidden;
+    background: #000;
+}
+.quizify-slider .slider-track,
+.notes-summarizer-slider .slider-track,
+.codeexplainer-slider .slider-track{
+    display: flex;
+    width: 100%;
+    transition: transform 0.4s ease-in-out;
+}
+.quizify-slider img,
+.notes-summarizer-slider img,
+.codeexplainer-slider img{
+    min-width: 100%;
+    height: auto;
+    max-height: 420px;
+    object-fit: contain;
+}
+.quizify-slider .slider-arrow,
+.notes-summarizer-slider .slider-arrow,
+.codeexplainer-slider .slider-arrow{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.45);
+    color: #fff;
+    border: none;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
     align-items: center;
     justify-content: center;
-    transition: all 0.3s ease;
+    font-size: 18px;
 }
-.teams .carousel .card:hover .box{
-    transform: scale(1.05);
+.quizify-slider .slider-arrow.prev,
+.notes-summarizer-slider .slider-arrow.prev,
+.codeexplainer-slider .slider-arrow.prev{
+    left: 10px;
 }
-.teams .carousel .card .text{
-    font-size: 25px;
-    font-weight: 500;
-    margin: 10px 0 7px 0;
-}
-.teams .carousel .card img{
-    height: 150px;
-    width: 150px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 5px solid crimson;
-    transition: all 0.3s ease;
-}
-.teams .carousel .card:hover img{
-    border-color: #fff;
-}
-.owl-dots{
-    text-align: center;
-    margin-top: 20px;
-}
-.owl-dot{
-    height: 13px;
-    width: 13px;
-    margin: 0 5px;
-    outline: none!important;
-    border-radius: 50%;
-    border: 2px solid crimson!important;
-    transition: all 0.3s ease;
-}
-.owl-dot.active{
-    width: 35px;
-    border-radius: 14px;
-}
-.owl-dot.active,
-.owl-dot:hover{
-    background: crimson!important;
+.quizify-slider .slider-arrow.next,
+.notes-summarizer-slider .slider-arrow.next,
+.codeexplainer-slider .slider-arrow.next{
+    right: 10px;
 }
 
 /* contact section styling */
@@ -561,6 +615,12 @@ padding-top: 15px;
   background: none;
 }
 
+.form-status{
+  margin-top: 10px;
+  font-size: 14px;
+  color: #111;
+}
+
 /* personal blog section styling */
 .personal{
   background-color: #111;
@@ -606,23 +666,93 @@ padding-top: 15px;
 }
 
 /* social media icons styling */
- .social-icons {
-    font-size: 35px;
-    cursor: pointer;
+.social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px; /* closer together */
+  flex-wrap: wrap;
+  font-size: 28px;
+  cursor: pointer;
+  margin: 10px 0 18px;
 }
-.fa-facebook:hover{color: #3b5998;}  .fa-instagram:hover{color: #d62976;}  .fa-twitter:hover{color: #171515;}  .fa-linkedin:hover{color: #0072b1;}  .fa-github:hover{color: #171515;}  .fa-discord:hover{color: #738adb;}  .fa-whatsapp:hover{color: #128c7e;}  .fa-telegram:hover{color: #0088CC; .fa-youtube:hover{color: #ff0000;}
+.social-icons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: olive;
+  border: 2px solid olive;
+  text-decoration: none;
+}
+.social-icons a i {
+  color: #fff;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+.social-icons a:hover i {
+  transform: translateY(-3px);
+}
+
+/* brand hover colors (circle background) */
+.social-icons a.facebook:hover {
+  background-color: #3b5998;
+  border-color: #3b5998;
+}
+.social-icons a.instagram:hover {
+  background-color: #d62976;
+  border-color: #d62976;
+}
+.social-icons a.x:hover {
+  background-color: #171515;
+  border-color: #171515;
+}
+.social-icons a.linkedin:hover {
+  background-color: #0072b1;
+  border-color: #0072b1;
+}
+.social-icons a.github:hover {
+  background-color: #171515;
+  border-color: #171515;
+}
+.social-icons a.discord:hover {
+  background-color: #738adb;
+  border-color: #738adb;
+}
+.social-icons a.whatsapp:hover {
+  background-color: #128c7e;
+  border-color: #128c7e;
+}
+.social-icons a.telegram:hover {
+  background-color: #0088CC;
+  border-color: #0088CC;
+}
+.social-icons a.youtube:hover {
+  background-color: #FF0000;
+  border-color: #FF0000;
+}
+
+/* base color for brand icons (outside footer) */
+.fa-brands,
 .fab {
-    color: olive;
+  color: olive;
 }
  
 /* footer section styling */
  #footer {
     background-color: #fff;
     text-align: center;
+    padding: 20px 10px 25px;
 } 
 .footer-text{
   font-size: 17px;
   color:red;
+}
+
+.footer-text .footer-name{
+  color: #4c4dff;
+  font-weight: 700;
 }
 
 /* responsive media query start */
@@ -701,6 +831,17 @@ padding-top: 15px;
         width: 100%;
         margin-bottom: 35px;
     }
+    /* stack project cards on tablet/mobile */
+    .project-card{
+        flex-direction: column;
+    }
+    .project-image,
+    .project-info{
+        flex: 1 1 100%;
+    }
+    .project-image{
+        max-height: none;
+    }
 }
 
 @media (max-width: 690px) {
@@ -718,6 +859,13 @@ padding-top: 15px;
     }
     .services .serv-content .card{
         width: 100%;
+    }
+    /* tighter padding for projects on small screens */
+    .projects .projects-content{
+        gap: 20px;
+    }
+    .project-info{
+        padding: 15px 18px;
     }
 }
 
@@ -750,5 +898,4 @@ padding-top: 15px;
         font-size: 23px;
         line-height: 38px;
     }
-
 }
