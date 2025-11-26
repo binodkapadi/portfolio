@@ -48,26 +48,87 @@ $(document).ready(function(){
         loop: true
     });
 
-    // owl carousel script
-    $('.carousel').owlCarousel({
-        margin: 20,
-        loop: true,
-        autoplay: true,
-        autoplayTimeOut: 2000,
-        autoplayHoverPause: true,
-        responsive: {
-            0:{
-                items: 1,
-                nav: false
-            },
-            600:{
-                items: 2,
-                nav: false
-            },
-            1000:{
-                items: 3,
-                nav: false
+    // Contact form submit (sends to Formspree – replace URL with your own form endpoint)
+    const contactForm = document.getElementById('contact-form');
+    const contactStatus = document.getElementById('contact-status');
+
+    if(contactForm){
+        contactForm.addEventListener('submit', function(e){
+            e.preventDefault();
+
+            if(contactStatus){
+                contactStatus.style.color = '#111';
+                contactStatus.textContent = 'Sending...';
             }
+
+            const formData = new FormData(contactForm);
+
+            fetch('https://formspree.io/f/mwpjdlbn', {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            }).then(function(response){
+                if(response.ok){
+                    if(contactStatus){
+                        contactStatus.style.color = 'green';
+                        contactStatus.textContent = 'Thank you! Your message has been sent.';
+                    }
+                    contactForm.reset();
+                }else{
+                    if(contactStatus){
+                        contactStatus.style.color = 'red';
+                        contactStatus.textContent = 'Something went wrong. Please try again later.';
+                    }
+                }
+            }).catch(function(){
+                if(contactStatus){
+                    contactStatus.style.color = 'red';
+                    contactStatus.textContent = 'Network error. Please check your connection and try again.';
+                }
+            });
+        });
+    }
+
+    // Project image sliders (Quizify, Notes_summarizer, Codeexplainer, etc.)
+    $('.quizify-slider, .notes-summarizer-slider, .codeexplainer-slider').each(function(){
+        var $slider = $(this);
+        var $track = $slider.find('.slider-track');
+        var $slides = $track.find('img');
+        var current = 0;
+        var total = $slides.length;
+
+        function goTo(index){
+            current = (index + total) % total;
+            $track.css('transform', 'translateX(' + (-current * 100) + '%)');
         }
+
+        $slider.find('.slider-arrow.prev').on('click', function(){
+            goTo(current - 1);
+        });
+
+        $slider.find('.slider-arrow.next').on('click', function(){
+            goTo(current + 1);
+        });
+
+        // autoplay
+        var intervalId = setInterval(function(){
+            goTo(current + 1);
+        }, 4000);
+
+        // pause on hover
+        $slider.on('mouseenter', function(){
+            clearInterval(intervalId);
+        });
+        $slider.on('mouseleave', function(){
+            intervalId = setInterval(function(){
+                goTo(current + 1);
+            }, 4000);
+        });
+
+        // init position
+        goTo(0);
     });
+
 });
