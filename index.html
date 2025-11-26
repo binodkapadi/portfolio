@@ -5,12 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Portfolio Website</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <!-- Font Awesome for social icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
 
 </head>
 <body>
@@ -25,7 +23,7 @@
                 <li><a href="#about" class="menu-btn">About</a></li>
                 <li><a href="#services" class="menu-btn">Services</a></li>
                 <li><a href="#skills" class="menu-btn">Skills</a></li>
-                <li><a href="#teams" class="menu-btn">Teams</a></li>
+                <li><a href="#projects" class="menu-btn">Projects</a></li>
                 <li><a href="#contact" class="menu-btn">Contact</a></li>
                 <li><a href="#personal" class="menu-btn">Personal blog</a></li>
             </ul>
@@ -58,11 +56,11 @@
                 <div class="column right">
                     <div class="text">I'm Binod and I'm a <span class="typing-2"></span></div>
                     <p>I am a versatile individual with a passion for technology and a wide range of skills that define my professional journey. As an Ethical Hacker, I am committed to ensuring the security and integrity of computer systems and networks. </br> Being a Developer, I am proficient in multiple programming languages, enabling me to create innovative and efficient software solutions.</br> As a Penetration Tester, I take on the role of a cyber assailant, attempting to breach systems and networks to assess their vulnerabilities.</br> Being a Designer, I combine my technical knowledge with a creative flair to develop visually captivating user interfaces and experiences.</br> As a Freelancer, I relish the freedom and flexibility to work on diverse projects, collaborating with various clients across different industries.</br> I am currently studying in Punjabi University, Patiala. My hobby is to visit new place and exploring new things and write documentary on that. I love to drink coffee.</p>
-                    <a target="_blank" href="https://drive.google.com/drive/folders/176Z-F89gjINYwymbcN0itkUI8FTBpN3z?usp=drive_link">CV</a>
-                    <a target="_blank" href="https://drive.google.com/drive/folders/1VtO2j0hDcKGRdnLw0tT8QLZT2C2higuI?usp=drive_link">Resume</a>
+                    <a target="_blank" href="https://drive.google.com/file/d/1H9GLsrg1ZbMmenoS4lnXbBKYjNFTX4VJ/view?usp=drive_link">CV</a>
+                    <a target="_blank" href="https://drive.google.com/file/d/1qrqWvFTL73L5Hcm4Xsqj-rpjRJAEJFkd/view?usp=drive_link">Resume</a>
                     <div class="about-text"
                     <p>👉 See My Certificates of Achievements</p>
-        <a target="_blank"href="https://drive.google.com/drive/folders/1dpa3hTvFegPufBEMpLBqwhNpy0xL-3i4?usp=drive_link">🔗Click here!</a>
+        <a target="_blank"href="https://drive.google.com/drive/folders/10JBeeVw2KfQqTiyHv_1ieyEKaUiGp5x8?usp=drive_link">🔗Click here!</a>
                   </div>
                 </div>
             </div>
@@ -186,51 +184,121 @@
                         </div>
                         <div class="line mysql"></div>
                     </div>
+                    <div class="bars">
+                        <div class="info">
+                            <span>MERN (MongoDB, Express.js, React.js, Node.js)</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="line mern"></div>
+                    </div>
+                    <div class="bars">
+                        <div class="info">
+                            <span>Python</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="line python"></div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- teams section start -->
-    <section class="teams" id="teams">
+    <!-- projects section start -->
+    <section class="projects" id="projects">
         <div class="max-width">
-            <h2 class="title">My teams</h2>
-            <div class="carousel owl-carousel">
-                <div class="card">
-                    <div class="box">
-                        <img src="images/profile-1.jpeg" alt="">
-                        <div class="text">Binod Kapadi</div>
-                        <p>Remember, achievements and experiences are unique to each individual, shaped by personal values, interests, and efforts. Embrace my identity as a learner, honest intellectual, developer, and student continue to pursue my passions and goals.</p>
+            <h2 class="title">My projects</h2>
+            <div class="projects-content">
+
+                <!-- Quizify -->
+                <div class="project-card">
+                    <div class="project-image quizify-slider">
+                        <div class="slider-track">
+                            <!-- Quizify screenshots (1–7 in order) -->
+                            <img src="images/quizify/1.png" alt="Quizify screenshot 1">
+                            <img src="images/quizify/2.png" alt="Quizify screenshot 2">
+                            <img src="images/quizify/3.png" alt="Quizify screenshot 3">
+                            <img src="images/quizify/4.png" alt="Quizify screenshot 4">
+                            <img src="images/quizify/5.png" alt="Quizify screenshot 5">
+                            <img src="images/quizify/6.png" alt="Quizify screenshot 6">
+                            <img src="images/quizify/7.png" alt="Quizify screenshot 7">
+                        </div>
+                        <button class="slider-arrow prev" aria-label="Previous screenshot">&#10094;</button>
+                        <button class="slider-arrow next" aria-label="Next screenshot">&#10095;</button>
+                    </div>
+                    <div class="project-info">
+                        <h3>Quizify</h3>
+                        <p>
+                            Quizify converts user-provided prompts or notes into multilingual, dynamic quizzes with an option to download them as PDFs.
+                            The platform also offers instant real-time scoring, ensuring a smooth and engaging learning experience.
+                        </p>
+                        <!-- TODO: replace # with your real Quizify link -->
+                        <a href="https://github.com/binodkapadi/Quizify" target="_blank" class="project-link">View project</a>
                     </div>
                 </div>
-                <div class="card">
-                    <div class="box">
-                        <img src="images/profile-2.jpeg" alt="">
-                        <div class="text">Jatin</div>
-                        <p>Achievements and experiences result from dedication, hard work, and commitment to personal goals. Embrace my passion for photography and education continue to explore and learn to unlock my full potential in both areas. </p>
+
+                <!-- Notes_summarizer -->
+                <div class="project-card">
+                    <div class="project-image notes-summarizer-slider">
+                        <div class="slider-track">
+                            <!-- Notes_summarizer screenshots (1–11 in order) -->
+                            <img src="images/NoteSummarizer/1.png" alt="Notes_summarizer screenshot 1">
+                            <img src="images/NoteSummarizer/2.png" alt="Notes_summarizer screenshot 2">
+                            <img src="images/NoteSummarizer/3.png" alt="Notes_summarizer screenshot 3">
+                            <img src="images/NoteSummarizer/4.png" alt="Notes_summarizer screenshot 4">
+                            <img src="images/NoteSummarizer/5.png" alt="Notes_summarizer screenshot 5">
+                            <img src="images/NoteSummarizer/6.png" alt="Notes_summarizer screenshot 6">
+                            <img src="images/NoteSummarizer/7.png" alt="Notes_summarizer screenshot 7">
+                            <img src="images/NoteSummarizer/8.png" alt="Notes_summarizer screenshot 8">
+                            <img src="images/NoteSummarizer/9.png" alt="Notes_summarizer screenshot 9">
+                            <img src="images/NoteSummarizer/10.png" alt="Notes_summarizer screenshot 10">
+                            <img src="images/NoteSummarizer/11.png" alt="Notes_summarizer screenshot 11">
+                        </div>
+                        <button class="slider-arrow prev" aria-label="Previous screenshot">&#10094;</button>
+                        <button class="slider-arrow next" aria-label="Next screenshot">&#10095;</button>
+                    </div>
+                    <div class="project-info">
+                        <h3>NotesSummarizer</h3>
+                        <p>
+                            The Note Summarizer converts long pasted notes and uploaded files (PDF, DOCX, PPT, JPEG, PNG, etc.)
+                            into clean, human-friendly notes. It analyzes the entire document and produces well-structured, easy-to-read summaries.
+                        </p>
+                        <!-- TODO: replace # with your real Notes_summarizer link -->
+                        <a href="#" target="_blank" class="project-link">View project</a>
                     </div>
                 </div>
-                <div class="card">
-                    <div class="box">
-                        <img src="images/profile-3.jpeg" alt="">
-                        <div class="text">Aryan Duvedi</div>
-                        <p>My voice convey emotions and messages to touch the hearts of my listeners. Every steps i have taken in my journey contributes to my personal growth and development, helping me become a well-rounded individual with talents and experiences.</p>
+
+                <!-- Codeexplainer -->
+                <div class="project-card">
+                    <div class="project-image codeexplainer-slider">
+                        <div class="slider-track">
+                            <!-- Codeexplainer screenshots (1–10 in order) -->
+                            <img src="images/codeExplainer/1.png" alt="Codeexplainer screenshot 1">
+                            <img src="images/codeExplainer/2.png" alt="Codeexplainer screenshot 2">
+                            <img src="images/codeExplainer/3.png" alt="Codeexplainer screenshot 3">
+                            <img src="images/codeExplainer/4.png" alt="Codeexplainer screenshot 4">
+                            <img src="images/codeExplainer/5.png" alt="Codeexplainer screenshot 5">
+                            <img src="images/codeExplainer/6.png" alt="Codeexplainer screenshot 6">
+                            <img src="images/codeExplainer/7.png" alt="Codeexplainer screenshot 7">
+                            <img src="images/codeExplainer/8.png" alt="Codeexplainer screenshot 8">
+                            <img src="images/codeExplainer/9.png" alt="Codeexplainer screenshot 9">
+                            <img src="images/codeExplainer/10.png" alt="Codeexplainer screenshot 10">
+                        </div>
+                        <button class="slider-arrow prev" aria-label="Previous screenshot">&#10094;</button>
+                        <button class="slider-arrow next" aria-label="Next screenshot">&#10095;</button>
+                    </div>
+                    <div class="project-info">
+                        <h3>CodeExplainer</h3>
+                        <p>
+                            It analyzes pasted code, pinpoints exact line numbers when errors occur, 
+                            explains each error clearly, and generates a corrected, ready-to-run version. 
+                            If no errors are found, it produces a detailed line-by-line explanation of the 
+                            code for better learning.
+                        </p>
+                        <!-- TODO: replace # with your real Codeexplainer link -->
+                        <a href="https://github.com/binodkapadi/Code_Explainer" target="_blank" class="project-link">View project</a>
                     </div>
                 </div>
-                <div class="card">
-                    <div class="box">
-                        <img src="images/profile-4.jpeg" alt="">
-                        <div class="text">Developers group</div>
-                        <p>In a developers group, we should focused on active communication, teamwork, code reviews, knowledge sharing, conflict resolution, innovation, continuous learning, time management and ensuring security and quality in our projects.</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="box">
-                        <img src="images/profile-5.jpeg" alt="">
-                        <div class="text">Hackathon group</div>
-                        <p>Hackathon group can maximize their productivity, creativity leading to a successful and rewarding Hackathon experience. We collaborate effectively, manage time efficiently, seek mentor guidance, and present their solutions compellingly for success.</p>
-                    </div>
-                </div>
+
             </div>
         </div>
     </section>
@@ -242,7 +310,9 @@
             <div class="contact-content">
                 <div class="column left">
                     <div class="text">Get in Touch</div>
-                    <p>I have completed my Lower Secondary education in Home town school. After completing my Lower secondary education i shifted to town which is very far from my motherland for further studies. I have completed my high level education from Radiant Secondary School which is situated in Kanchanpur district,Nepal. I got 3.85 GPA in final paper. There are all together four members in my family. Me, Father, Mother and one Sister. She has completed 11th grade. She is studying in Kanchan Secondary school situated at Kanchanpur,Nepal. My Family is happy family.</p>
+                    <p>I completed my Lower Secondary education at my hometown school. After that, I moved to a town far from my motherland to pursue higher studies. I finished my High School education at Radiant Secondary School, located in Kanchanpur district, Nepal, and secured an impressive GPA of 3.85 in my final examinations.<br>
+                        <br>There are four members in my family: my father, mother, my younger sister, and me. My sister has completed Grade 11 and is currently studying at Kanchan Secondary School in Kanchanpur, Nepal. We are a close-knit and happy family.<br>   
+                        <br>I have also completed my Bachelor's degree from Punjabi University, Patiala, situated in the Patiala district of Punjab, India. During my academic journey, I actively participated in various hackathons and numerous extracurricular activities, which helped me expand my skills and gain valuable experience.</p>
                     <div class="icons">
                         <div class="row">
                             <i class="fas fa-user"></i>
@@ -270,24 +340,25 @@
 
                 <div class="column right">
                     <div class="text">Message me</div>
-                    <form action="#">
+                    <form id="contact-form">
                         <div class="fields">
                             <div class="field name">
-                                <input type="text" placeholder="Name" required>
+                                <input type="text" name="name" placeholder="Name" required>
                             </div>
                             <div class="field email">
-                                <input type="email" placeholder="Email" required>
+                                <input type="email" name="email" placeholder="Email" required>
                             </div>
                         </div>
                         <div class="field">
-                            <input type="text" placeholder="Subject" required>
+                            <input type="text" name="subject" placeholder="Subject" required>
                         </div>
                         <div class="field textarea">
-                            <textarea cols="30" rows="10" placeholder="Message.." required></textarea>
+                            <textarea name="message" cols="30" rows="10" placeholder="Message.." required></textarea>
                         </div>
                         <div class="button-area">
                             <button type="submit">Send message</button>
                         </div>
+                        <div id="contact-status" class="form-status"></div>
                     </form>
                 </div>
               <!-- to edit google map goto https://www.embed-map.com type your location, generate html code and copy the html  -->
@@ -344,7 +415,7 @@
            <div class="para">
           <s1>Java is a popular programming language. Java is used to develop mobile apps, web apps, desktop apps, games and much more. Java is a platform-independent language. We can write Java code in one platform and run it in another platform.Java is a general-purpose language with a wide range of applications. It's used for developing mobile and desktop applications, big data processing, embedded systems, and so on.Java is an object-oriented programming language. It helps in code reusability.</s1>  
         </br>
-          <a href="https://javatpoint.com/java-tutorial" target="_blank">
+          <a href="https://www.tpointtech.com/java-tutorial" target="_blank">
           <button class="btn">Read More </button></a>
          </div>
         <div class= "blogItem">
@@ -359,59 +430,109 @@
         </div>
       </section>
 
-     <!-- footer section start -->   
-    <footer id="footer">
+     <!-- footer section start -->
+     <footer id="footer">
         <div class="container-fluid">
-          <a href="https://www.facebook.com/royalbinod.kapadi "target="_blank" rel="noreferrer"  aria-label="Facebook"   className="facebook" >
-            <i className="fa-brands fa-facebook-f"></i>
-          </a>
+          <div class="social-icons mt-4">
+            <a
+              href="https://www.facebook.com/royalbinod.kapadi"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Facebook"
+              class="facebook"
+            >
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
 
-          <a href="https://www.instagram.com/binodbhatt9865"  target="_blank"  rel="noreferrer"  aria-label="Instagram"  className="instagram" >
-            <i className="fa-brands fa-instagram"></i>
-          </a>
+            <a
+              href="https://www.instagram.com/binodbhatt9865"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Instagram"
+              class="instagram"
+            >
+              <i class="fa-brands fa-instagram"></i>
+            </a>
 
-          <a  href="https://twitter.com/KapadiBinod?t=JTh1l9itcqz8UWrP9Ah-Ng&s=09"  target="_blank"  rel="noreferrer" aria-label="X (Twitter)"  className="x"  >
-            <i className="fa-brands fa-x-twitter"></i>
-          </a>
+            <a
+              href="https://x.com/KapadiBinod"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="X (Twitter)"
+              class="x"
+            >
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
 
-          <a  href="https://www.linkedin.com/in/hackerboybinu24/"  target="_blank"  rel="noreferrer"  aria-label="LinkedIn"  className="linkedin" >
-            <i className="fa-brands fa-linkedin-in"></i>
-          </a>
+            <a
+              href="https://www.linkedin.com/in/binodkapadi"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="LinkedIn"
+              class="linkedin"
+            >
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
 
-          <a  href="https://github.com/binodkapadi"  target="_blank"  rel="noreferrer"  aria-label="GitHub"  className="github"  >
-            <i className="fa-brands fa-github"></i>
-          </a>
+            <a
+              href="https://github.com/binodkapadi"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="GitHub"
+              class="github"
+            >
+              <i class="fa-brands fa-github"></i>
+            </a>
 
-          <a  href="https://discord.gg/hackerboy_4"  target="_blank"  rel="noreferrer"  aria-label="Discord"  className="discord"  >
-            <i className="fa-brands fa-discord"></i>
-          </a>
+            <a
+              href="https://discord.com/users/1020520872206938153"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Discord"
+              class="discord"
+            >
+              <i class="fa-brands fa-discord"></i>
+            </a>
 
-          <a
-            href="http://surl.li/juurs"  target="_blank"  rel="noreferrer"  aria-label="WhatsApp"  className="whatsapp"  >
-            <i className="fa-brands fa-whatsapp"></i>
-          </a>
+            <a
+              href="https://chat.whatsapp.com/FRxtbuA6wxb2aXcadW9inx"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="WhatsApp"
+              class="whatsapp"
+            >
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
 
-          <a  href="https://t.me/Hackerdevil404"  target="_blank"  rel="noreferrer"  aria-label="Telegram"  className="telegram"  >
-            <i className="fa-brands fa-telegram"></i>
-          </a>
+            <a
+              href="https://t.me/errevolution1"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Telegram"
+              class="telegram"
+            >
+              <i class="fa-brands fa-telegram"></i>
+            </a>
 
-          <a  href="https://www.youtube.com/"  target="_blank"  rel="noreferrer"  aria-label="YouTube"  className="youtube"  >
-            <i className="fa-brands fa-youtube"></i>
-          </a>
-        </div>
-          
+            <a
+              href="https://www.youtube.com/@errevolution1"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="YouTube"
+              class="youtube"
+            >
+              <i class="fa-brands fa-youtube"></i>
+            </a>
+          </div>
+
       <div class="footer-text">
         <p>
           Copyright ©
-          by Binod Kapadi<br> All Rights Reserved 2023.
+          by <span class="footer-name">Binod Kapadi</span><br> All Rights Reserved 2023.
         </p>
       </div>
     </div>
     </footer>  
      <script src="script.js"></script> 
 </body>
-
 </html>
-
-
-
