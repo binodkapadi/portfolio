@@ -610,7 +610,7 @@ padding-top: 15px;
     font-size: 35px;
     cursor: pointer;
 }
-.fa-facebook:hover{color: #3b5998;}  .fa-instagram:hover{color: #d62976;}  .fa-twitter:hover{color:#00acee;}  .fa-linkedin:hover{color: #0072b1;}  .fa-github:hover{color: #171515;}  .fa-discord:hover{color: #738adb;}  .fa-whatsapp:hover{color: #128c7e;}  .fa-telegram:hover{color: #0088CC;}
+.fa-facebook:hover{color: #3b5998;}  .fa-instagram:hover{color: #d62976;}  .fa-twitter:hover{color: #171515;}  .fa-linkedin:hover{color: #0072b1;}  .fa-github:hover{color: #171515;}  .fa-discord:hover{color: #738adb;}  .fa-whatsapp:hover{color: #128c7e;}  .fa-telegram:hover{color: #0088CC; .fa-youtube:hover{color: #ff0000;}
 .fab {
     color: olive;
 }
@@ -750,4 +750,5 @@ padding-top: 15px;
         font-size: 23px;
         line-height: 38px;
     }
+
 }
