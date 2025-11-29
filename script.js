@@ -35,14 +35,14 @@ $(document).ready(function(){
 
     // typing text animation script
     var typed = new Typed(".typing", {
-        strings: ["Ethical hacker","Data Scientist","ML/AI Expert","Google Cloud Learner","Freelancer"],
+        strings: ["AI/ML Engineer","Developer","Data Scientist","Freelancer","Data Analyst","Google Cloud Learner","MLOps Engineer", "NLP Engineer", "Computer Vison Engineer"],
         typeSpeed: 100,
-        backSpeed: 60,
+        backSpeed: 50,
         loop: true
     });
 
     var typed = new Typed(".typing-2", {
-        strings: ["Ethical hacker","Data Scientist","ML/AI Expert","Google Cloud Learner","Freelancer"],
+        strings: ["AI/ML Engineer","Developer","Data Scientist","Freelancer","Data Analyst","Google Cloud Learner","MLOps Engineer", "NLP Engineer", "Computer Vison Engineer"],
         typeSpeed: 100,
         backSpeed: 60,
         loop: true
@@ -132,3 +132,4 @@ $(document).ready(function(){
     });
 
 });
+
